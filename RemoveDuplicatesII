@@ -1,0 +1,51 @@
+int removeDuplicates(vector<int>& nums) {
+    vector<int>newone;
+    unordered_map<int,int>mp;
+    int index = 0;
+    int no_of_dups = 0;
+    
+    for(int i = 0; i<nums.size(); i++) {
+        mp[nums[i]]++;
+    }
+
+    nums.clear();
+
+    
+
+    for(auto &i:mp) {
+        if(i.second>2) {
+            no_of_dups+=i.second-2;
+            i.second = 2;
+            
+
+        }
+
+        
+
+        if(i.second>1) {
+            int temp = i.first;
+            int end = i.second;
+            for(int j=0; j<end; j++) {
+                nums.push_back(temp);
+               
+            }
+        }
+
+        else {
+             nums.push_back(i.first);
+            
+   
+    
+        }
+    }
+
+    sort(nums.begin(), nums.end());
+
+    return nums.size();
+
+  
+    
+   
+    
+
+}
