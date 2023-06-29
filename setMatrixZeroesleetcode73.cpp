@@ -53,6 +53,7 @@ void setZeroes(vector<vector<int>>& matrix) {
 
 int main() {
     vector<vector<int>> v{{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+    setZeroes(v);
 
 
 
