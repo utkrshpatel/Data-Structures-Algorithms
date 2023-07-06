@@ -27,12 +27,7 @@ void rotate(vector<int>& nums, int k) {
         nums[i] = *it;
         it++;
     }
-
-
-    for(int i = 0; i<nums.size(); i++) {
-       cout<<nums[i]<<" ";
-    }
-    
+ 
 }
 
 
